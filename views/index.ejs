@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casa de Apoio - Filhos de Hiram</title>
+</head>
+<body>
+    <div>
+        <h2>FAÇA SUA DOAÇÃO AQUI</h2>
+        <hr /> <br/>
+    </div>
+
+    <!--EJS-->
+    <div>
+        <form action="/doar" method="POST">
+            <% for(var i=0; i<valores.length; i++) { %>
+            <!-- <tr>
+                    <td><%= valores[i].titulo %></td>
+                    <td>R$ <%= valores[i].valor%></td>
+
+                <td><form action="/doar?<%= valores[i].id %>" method="POST">
+                        <input type="submit" value="DOAR" />
+                    </form> </td>
+
+                </tr> -->
+                <input id="<%= valores[i].id%>" type="radio" name="valor" value="<%= valores[i].valor%>">R$ <%= valores[i].valor%> </input> <br>
+            <% } %>
+            <input id="btnDoar" type="submit" onclick="fn1()"value="DOAR" />
+        </form> 
+    </div>
+    
+</body>
+</html>
