@@ -11,5 +11,6 @@ app.use(express.json());
    
 app.use('/', require('./routes'));
 
+//testando
 app.listen(4000, () => 
     console.log("Rodando na porta: 4000"));
